@@ -1,31 +1,35 @@
-.listItem__wrapper {
+.wrapper {
     list-style: none;
     padding: 50px 30px;
     display: flex;
     align-items: center;
 }
-.listItem__image{
+
+.image {
     flex-shrink: 0;
     margin-right: 30px;
     width: 150px;
     height: 150px;
     border-radius: 50%;
 }
-.listItem__name{
+
+.name {
     margin: 0;
-    color: #1e58FF;
+    color: #1E58FF;
     font-weight: 700;
 }
-.listItem__description{
+
+.description {
     margin: 10px 0 20px;
     font-weight: 300;
 }
-.listItem__button{
+
+.button {
     font-size: 10px;
     text-decoration: none;
+    padding: 7px 12px;
     font-weight: 500;
     background: none;
-    border: 2px solid #1e58FF;
-    color: #1e58FF;
-    padding: 7px 12px;
+    border: 2px solid #1E58FF;
+    color: #1E58FF;
 }
