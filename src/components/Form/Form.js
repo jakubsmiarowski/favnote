@@ -20,7 +20,7 @@ const descriptions = {
 
 class Form extends React.Component {
   state = {
-    activeOption: types.twitter,
+    type: types.twitter,
     title: "",
     link: "",
     image: "",
@@ -29,7 +29,7 @@ class Form extends React.Component {
 
   handleRadioButtonChange = type => {
     this.setState({
-      activeOption: type
+      type: type
     });
   };
 
@@ -47,13 +47,13 @@ class Form extends React.Component {
   };
 
   render() {
-    const { activeOption } = this.state;
+    const { type } = this.state;
 
     return (
       <AppContext.Consumer>
         {context => (
           <div className={styles.wrapper}>
-            <Title>Add new {descriptions[activeOption]}</Title>
+            <Title>Add new {descriptions[type]}</Title>
             <form
               autoComplete="off"
               className={styles.form}
@@ -62,21 +62,21 @@ class Form extends React.Component {
               <div className={styles.formOptions}>
                 <Radio
                   id={types.twitter}
-                  checked={activeOption === types.twitter}
+                  checked={type === types.twitter}
                   changeFn={() => this.handleRadioButtonChange(types.twitter)}
                 >
                   Twitter
                 </Radio>
                 <Radio
                   id={types.article}
-                  checked={activeOption === types.article}
+                  checked={type === types.article}
                   changeFn={() => this.handleRadioButtonChange(types.article)}
                 >
                   Article
                 </Radio>
                 <Radio
                   id={types.note}
-                  checked={activeOption === types.note}
+                  checked={type === types.note}
                   changeFn={() => this.handleRadioButtonChange(types.note)}
                 >
                   Note
@@ -87,22 +87,22 @@ class Form extends React.Component {
                 value={this.state.title}
                 name="title"
                 label={
-                  activeOption === types.twitter ? "Twitter Name" : "Title"
+                  type === types.twitter ? "Twitter Name" : "Title"
                 }
                 maxLength={30}
               />
-              {activeOption !== types.note ? (
+              {type !== types.note ? (
                 <Input
                   onChange={this.handleInputChange}
                   value={this.state.link}
                   name="link"
                   label={
-                    activeOption === types.twitter ? "Twitter Link" : "Link"
+                    type === types.twitter ? "Twitter Link" : "Link"
                   }
                 />
               ) : null}
 
-              {activeOption === types.twitter ? (
+              {type === types.twitter ? (
                 <Input
                   onChange={this.handleInputChange}
                   value={this.state.image}
