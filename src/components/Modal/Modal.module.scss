@@ -1,5 +1,5 @@
 .wrapper {
-    padding: 50px 80px;
+    padding: 50px 80px 0;
     top: 50%;
     transform: translateY(-50%);
     left: 0;
@@ -8,6 +8,6 @@
     width: 50vw;
     height: 70vh;
     background-color: white;
-    box-shadow: 0 20px 40px -10px rgba(#818181, .5);
+    box-shadow: 0 20px 40px -15px rgba(#1e58ff, .3);
     position: fixed;
 }
