@@ -1,7 +1,5 @@
-import React from 'react';
+import React from "react";
 
-const ArticlesView = () => (
-    <p>This an Articles View</p>
-)
+const ArticlesView = () => <p>This is articles view</p>;
 
 export default ArticlesView;
